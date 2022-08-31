@@ -1,6 +1,6 @@
 import React from 'react';
-import {AppBar, Toolbar, Typography, InputBase, Box } from '@material-ui/core';
-import SearchIcon from '@material-ui/icons/Search';
+import {AppBar, Toolbar, Typography, Box } from '@material-ui/core';
+
 
 import useStyles from './styles';
 
@@ -13,17 +13,7 @@ const Header = () => {
                     Flight Search
                 </Typography>
                 <Box display="flex">
-                    <Typography variant="h6" className={classes.title}>
-                        Search for flights
-                    </Typography>
 
-                    <div className={classes.search}>
-                        <div className={classes.searchIcon}>
-                            <SearchIcon />
-                        </div>
-                        <InputBase placeholder="From..." classes={{ root: classes.inputRoot, input: classes.inputInput }} />
-                        <InputBase placeholder="To..." classes={{ root: classes.inputRoot, input: classes.inputInput }} />
-                    </div>
                 </Box>
             </Toolbar>
         </AppBar>
