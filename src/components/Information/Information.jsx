@@ -44,13 +44,15 @@ const Information = () => {
 
     return (
         <form>
-            <input placeholder="From ..." type="text" id="origin" name="origin" onChange={handleOriginChange} value={origin} />
+            <h5>From: </h5>
+            <input type="text" id="origin" name="origin" onChange={handleOriginChange} value={origin} />
             {airports.length > 0 ? 
             airports.map((airport) => {
                 return <button style={{display: 'block', width: '20%', height: '5%', textAlign: 'left'}} value={airport.AirportCode} onClick={setOriginAirport}>{airport.AirportName} {airport.AirportCode}</button>
-            }) : <div>{airports.length}</div>    
+            }) : <div></div>    
             }
-            <input placeholder="To ..." type="text" id="destination" name="destination" onChange={handleDestChange}/>
+            <h5>To: </h5>
+            <input type="text" id="destination" name="destination" onChange={handleDestChange}/>
         </form>
     );
 }
