@@ -1,8 +1,9 @@
 button {
     display: block;
-    width: 20%;
-    height: 5%;
+    width: 100%;
+    height: 60px;
     text-align: left;
+    position:relative;
 }
 
 form {
@@ -11,13 +12,39 @@ form {
     justify-content: center;
 }
 
+#input {
+    width:250px;
+}
+
 input {
+    padding-left: 20px;
+}
+
+h5 {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+
+
+input {
+    height: 50px;
+    width: 250px;
+    border: solid black 1px;
+}
+
+select {
+    height: 50px;
+    width: 250px;
+}
+
+option {
     height: 50px;
 }
 
 #icon {
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
 }
 
 #icon:hover {
@@ -25,6 +52,45 @@ input {
 }
 
 #icon:active {
-    outline: solid black 3px;
+    outline: solid black 2px;
 }
+
+#dropbutton {
+    border: solid black 1px;
+    background-color: white;
+    height: 50px;
+    width: 250px;
+}
+
+#dropdown {
+    margin: auto;
+    padding: 5%;
+    width: 60%;
+    border: solid black 1px;
+}
+
+#adults {
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 3%;
+}
+
+#circleIcon {
+    height: 100%;
+    width: 100%;
+}
+
+h4 {
+    margin-bottom: 2%;
+    margin-top: 3%;
+}
+
+#passengers {
+    height: 50px;
+    width: 50px;
+}
+
+
+
+
 
