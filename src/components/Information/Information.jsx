@@ -26,6 +26,8 @@ const Information = () => {
     const [numAdults, setNumAdults] = useState(1);
     const [numChild, setNumChild] = useState(0);
 
+    const [arrayChild, setArrayChild] = useState([]);
+
 
 
     const handleOriginChange = (e) => {
@@ -96,12 +98,41 @@ const Information = () => {
         var children = numChild
         children--
         setNumChild(children)
+
+        var childArray = arrayChild
+        childArray.pop()
+        setArrayChild(childArray)
     }
 
     const AddChildPassenger = () => {
         var children = numChild
         children++
         setNumChild(children)
+
+        var childArray = arrayChild
+        childArray.push('0')
+        setArrayChild(childArray)
+    }
+
+    const AddChildArray = (e, index) => {
+        var childArray = arrayChild
+        childArray[index] = e.target.value
+        setArrayChild(childArray)
+        console.log(arrayChild)
+    }
+    
+    const createSelect = (child) => {
+        let options = []
+        for (let i = 0; i<16; i++) {
+            var option;
+            if(child === i.toString()) {
+                option = <option key={i} value={i} selected="selected">{i}</option>;
+            } else {
+                option = <option key={i} value={i}>{i}</option>;
+            }
+            options.push(option)
+        }
+        return options;
     }
 
     return (
@@ -217,12 +248,19 @@ const Information = () => {
                                         </td>
                                     </tr>
                                 </table>
-                                   
-                                
 
-
-                                
-
+                                {arrayChild.length > 0 ?
+                                arrayChild.map((child, index) => {
+                                    return (
+                                        <div>
+                                            <h4>Age of Child {index+1}</h4>
+                                            <select onClick={(e) => AddChildArray(e, index)}>
+                                                {createSelect(child)}
+                                            </select>                                            
+                                        </div>
+                                        )
+                                }) : <></>
+                                }
                             </div>
                         </div>
                         }
