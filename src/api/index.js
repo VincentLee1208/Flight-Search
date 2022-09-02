@@ -18,3 +18,4 @@ export const getAirports = async(location) => {
         console.log(error)
     }
 }
+
