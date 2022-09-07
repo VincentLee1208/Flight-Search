@@ -1,0 +1,61 @@
+.MuiCardContent-root {
+    height: 200px;
+}
+
+.TicketContainer {
+    //border: solid black 1px;
+    margin-top: 1%;
+    height: 100%;
+}
+
+.TicketLeft {
+    //border:solid red 1px;
+    height: 100%;
+    width: 75%;
+}
+
+.Leg1 {
+    border: solid brown 1px;
+    width: 100%;
+    height: 50%;
+    display: inline-block;
+}
+
+
+.Leg2 {
+    //border: solid blue 1px;
+    width: 100%;
+    height: 50%;
+    display: inline-block;
+}
+
+.Carrier {
+    border: solid purple 1px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+}
+
+.Carrier_Logo {
+    //border: solid blue 1px;
+    height: 20px;
+
+}
+
+.Carrier_Name {
+    //border: solid orange 1px;
+    font-weight: bold;
+    font-size: 0.8em;
+    margin-left: 20px;
+    color: #717787;
+}
+
+.LegInfo {
+    border: solid orange 1px;
+    margin-left: 34%;
+    width: 67%;
+    display: inline-block;
+}
+

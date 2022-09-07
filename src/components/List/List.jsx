@@ -1,8 +1,21 @@
 import React from 'react';
+import { Grid } from '@material-ui/core';
+import FlightDetails from '../FlightDetails/FlightDetails';
 
-const List = () => {
+const List = ({topFlights}) => {
     return (
-        <h1>List</h1> 
+        <div>
+            <Grid container spacing={3} >
+                {topFlights?.itineraries?.buckets?.map((allflights) => (
+                        allflights.items.map((topflight,i) => (
+                            <Grid item key={i} xs={12}>
+                                <FlightDetails topflight={topflight}/>
+                            </Grid>
+                        ))
+                ))}
+            </Grid>
+             
+        </div>
     );
 }
 
