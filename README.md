@@ -1,3 +1,11 @@
+#About
+
+Simple flight ticket searching application.
+Users can choose a number of filters and options to find the best price flight for their trip.
+
+Uses multiple APIs to gather information about the desired airports and airlines.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
