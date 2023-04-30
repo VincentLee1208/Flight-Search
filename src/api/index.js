@@ -9,7 +9,7 @@ export const getAirports = async(location) => {
                 sortBy: 'AirportName:asc'
             },
             headers: {
-              'X-RapidAPI-Key': 'f9f4818478msh32c4f4ad2b8e08ap132ccfjsn40a2d168b9d5',
+              'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
               'X-RapidAPI-Host': 'world-airports-directory.p.rapidapi.com'
             }
           });
@@ -38,7 +38,7 @@ export const getAllFlights = async(numAdults, start, dest, sDate, rDate, flightC
               returnArriveTo: '23:59'
             },
             headers: {
-              'X-RapidAPI-Key': 'f9f4818478msh32c4f4ad2b8e08ap132ccfjsn40a2d168b9d5',
+              'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
               'X-RapidAPI-Host': 'skyscanner44.p.rapidapi.com'
             }
         });
@@ -61,7 +61,7 @@ export const getTopFlights = async(numAdults, start, dest, sDate, rDate, flightC
               currency: 'CAD',
             },
             headers: {
-              'X-RapidAPI-Key': 'f9f4818478msh32c4f4ad2b8e08ap132ccfjsn40a2d168b9d5',
+              'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
               'X-RapidAPI-Host': 'skyscanner44.p.rapidapi.com'
             }
         });
